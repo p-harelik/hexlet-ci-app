@@ -1,3 +1,4 @@
+name: build
 on: push
 jobs:
   build:
@@ -5,8 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: npm -v
       - run: make setup
-      - run: make start
       - run: make test
       - run: make lint
